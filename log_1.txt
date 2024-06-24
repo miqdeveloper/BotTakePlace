@@ -1,0 +1,499 @@
+<!DOCTYPE html><html lang="pt-BR"><head><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/mt_captcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/turnstile/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/turnstile/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/amazon_waf/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/yandex/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/lemin/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/arkoselabs/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/arkoselabs/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/recaptcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/recaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/keycaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/hcaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/hcaptcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/geetest_v4/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/geetest/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/communication_helpers.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/core_helpers.js"></script>
+    <title>Fiel Torcedor</title>
+    <meta name="description" content="Ingressos Corinthians e Planos do Fiel Torcedor em um só site.">
+    <link rel="canonical" href="https://www.fieltorcedor.com.br">
+    <meta name="robots" content="index, follow">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="feBU_jgA_CTTTJaXehF7altJZwrkv5Lm-NVEhPqQa8U">
+    
+
+    <link rel="shortcut icon" href="/static/fieltorcedor/img/favicon.ico">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="/static/fieltorcedor/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/slick-v2.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/slick-theme.min.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/animate.min.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/pace-theme.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/balloon.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/styles-v53.css">
+    
+    
+    
+    
+  <captcha-widgets></captcha-widgets></head>
+  <body class="pace-done "><div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+
+    
+
+    
+
+
+  
+
+<nav class="menu-mobile" id="menu_nav">
+
+  <i class="fa fa-close close_nav" style="font-size:36px"></i>
+  <ul class="menu-nav authenticate">
+    <li class="op">
+      MINHA CONTA
+    </li>
+      <li><a href="/minha-conta/categorias/" class="close_nav">Categorias</a></li>
+
+    
+      <li><a href="/minha-conta/dependentes/" class="close_nav">Dependentes</a></li>
+    
+
+      <li><a href="/minha-conta/alterar-cadastro/" class="close_nav">Alterar Cadastro</a></li>
+      <li><a href="/auth/password_change/" class="close_nav">Alterar Senha</a></li>
+
+    
+
+    
+
+    
+      <li><a href="/minha-conta/financeiro/" class="close_nav">Financeiro</a></li>
+      <li><a href="/minha-conta/extrato/" class="close_nav">Extrato</a></li>
+      <li><a href="/minha-conta/pontos/" class="close_nav">Pontos</a></li>
+    
+    <li class="op">
+      Ingressos
+    </li>
+
+
+
+
+        <li><a href="/jogos/" class="close_nav">Comprar ingressos</a></li>
+        <li><a href="/ingressos/" class="close_nav">Meus Ingressos</a></li>
+
+    
+
+    <li style="margin-top: 1rem;"> <a href="#" data-toggle="modal" data-target="#modalAjuda" class="close_nav">AJUDA</a></li>
+    <li> <a href="/auth/logout/" class="close_nav">Sair</a></li>
+     
+  </ul>
+</nav>
+
+<header>
+  
+
+
+<ul class="logos">
+  <li class="list-unstyled">
+    <a href="https://www.instagram.com/fieltorcedor/" class="align-middle" target="_blank">
+      <i class="fa fa-instagram fa" style="margin-right: 12px;">
+        <span class="d-none"> icon </span>
+      </i>
+    </a> 
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.facebook.com/programafieltorcedor" class="align-middle" target="_blank">
+      <i class="fa fa-facebook fa">
+        <span class="d-none"> icon </span>
+      </i>
+    </a>
+  </li>
+  <li class="list-unstyled">
+    <a href="https://twitter.com/fieltorcedor" class="align-middle" target="_blank">
+      <i class="logo-twitterx">
+        <span class="d-none"> icon </span>
+      </i>
+    </a> 
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.corinthians.com.br/" class="align-middle" target="_blank">
+      <img alt="Logo Fiel Torcedor" src="/static/fieltorcedor/img/logo.png" loading="lazy">
+    </a> 
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.corinthianstv.com" class="align-middle" target="_blank">
+      <i class="logo-corinthianstv color-light fa mx-2">
+        <span class="d-none"> icon </span>
+      </i>
+    </a>
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.youtube.com/@corinthians" class="align-middle" target="_blank">
+      <i class="fa fa-youtube fa">
+        <span class="d-none"> icon </span>
+      </i>
+    </a> 
+  </li>
+  <li class="list-unstyled"> 
+    <a href="https://onelink.to/sccp" class="align-middle" target="_blank">
+      <i class="logo-usccp">
+        <span class="d-none"> icon </span>
+      </i> 
+    </a>
+  </li>
+</ul>
+  
+  <div class="header-container authenticate">
+    <div class="item  item-auth">     
+      <a href="/" class="align-top">
+        <img alt="Imagem Fiel Torcedor" src="/static/fieltorcedor/img/logo-fiel-torcedor.png" loading="lazy" class="logo">
+      </a>
+    </div>
+    <div class="item auth">
+      <div class="item-menu">
+        <a class="icon" id="btn_nav">
+          <i class="fa fa-bars"></i><span>MENU</span>
+        </a>
+
+        <div class="header-menu" style="position: relative;">
+          <div class="p-0 d-inline-block">
+            <button class="bg-transparent border-0 text-white minha-conta font-steelfish position-relative p-0 m-0 mx-2 font20">MINHA CONTA</button>
+            
+            <div class="col-3 p-0 pb-2 submenu minha-conta position-absolute text-center d-none px-1">
+              <hr class="m-0 w-75 mx-auto" style="border: 0.1px inset #847248">
+              <a href="/minha-conta/categorias/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Categorias</a>
+
+              
+              <a href="/minha-conta/dependentes/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Dependentes</a>
+              
+
+              <a href="/minha-conta/alterar-cadastro/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Alterar Cadastro</a>
+              <a href="/auth/password_change/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Alterar Senha</a>
+
+              
+
+              
+
+              
+              <a href="/minha-conta/financeiro/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Financeiro</a>
+              <a href="/minha-conta/extrato/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Extrato</a>
+              <a href="/minha-conta/pontos/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Pontos</a>
+              
+            </div>
+          </div>
+
+          <div class="p-0 d-inline-block">
+            <button class="bg-transparent border-0 text-white ingressos font-steelfish  position-relative p-0 m-0 mx-2 font20">INGRESSOS</button>
+            <div class="col-3 p-0 pb-2 submenu ingressos position-absolute text-center d-none px-1">
+              <hr class="m-0 w-75 mx-auto" style="border: 0.1px inset #847248">
+              <a href="/jogos/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Comprar ingressos</a>
+              <a href="/ingressos/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Meus Ingressos</a>
+            </div>
+          </div>
+
+
+          
+          
+  
+          <a href="#" data-toggle="modal" data-target="#modalAjuda" class="font20">AJUDA</a>
+      
+        </div>
+      </div>
+      <div class="item-user"> 
+
+        
+        <div class="user">
+      
+  
+          <div class="font-gotham-black text-white text-left font14 p-0">
+            <span class="font-gotham-black font14">
+              GLEISON FRANCA
+            </span>
+            <div class="font-gotham-book text-white text-left font10 p-0">
+              Minha Vida / <a href="/auth/logout/">Sair</a>
+            </div>
+          </div>
+     
+          <div class="d-inline-block align-top">
+            
+            <a href="/minha-conta/pontos/">
+              <div class="font-gotham text-white font12 p-0 px-2 m-0 mx-auto">
+                <div class="font-gotham text-white d-inline-block font12 p-0 ml-1">
+                  <div class="font-gotham-black text-white font14 p-0 text-right">
+                    29,60
+                  </div>
+                  <span>
+                    Pontos
+                  </span>
+              
+                </div>
+        
+                  <img alt="coins" src="/static/fieltorcedor/img/coins.png" loading="lazy" class="align-baseline">
+        
+              </div>
+            </a>
+            
+          </div>
+     
+  
+        </div>
+        
+  
+      </div>
+    </div>
+
+
+  </div>
+
+</header>
+
+
+
+    
+
+      <main id="main" class="bg-login main">
+        <div class="container">
+          
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/jogos/">Jogos</a></li>
+    <li class="breadcrumb-item active" aria-current="page">CORINTHIANS X SÃO PAULO (BR24)</li>
+    <li class="breadcrumb-item active" aria-current="page">SUL DORIL</li>
+    <li class="breadcrumb-item active" aria-current="page">Comprar</li>
+  </ol>
+</nav>
+
+
+  
+
+
+  <h1 class="title">PARA QUEM SÃO OS INGRESSOS?</h1>
+
+  <section id="main-content">
+    <div class="row">
+      <div class="col">
+
+        
+          
+          <div class="alert alert-danger" role="alert">
+            Erro, Configuração indisponivel para o Evento/Categoria/Setor indicado.
+          </div>
+          
+        
+
+        <form class="form" method="post" data-gtm-form-interact-id="0">
+          <input type="hidden" name="csrfmiddlewaretoken" value="Y5HaGtaDQqBXXQZc5rhrT4bTzxNtUkIIcEOlaHFO3XJqJHJHU8OczNlynBitEUOD">
+
+          
+          <div class="form-check">
+            
+            <label class="form-check-label" for="id_dependentes_1001352">
+              <input class="form-check-input membership-check" type="checkbox" name="dependentes" value="1001352" id="id_dependentes_1001352">
+              <h4>AGNES FRANCA</h4>
+            </label>
+            
+          </div>
+          
+          <div class="form-check">
+            
+            <label class="form-check-label" for="id_dependentes_982753">
+              <input class="form-check-input membership-check" type="checkbox" name="dependentes" value="982753" id="id_dependentes_982753" data-gtm-form-interact-field-id="0">
+              <h4>ELIETE COELHO</h4>
+            </label>
+            
+          </div>
+          
+          <div class="form-check">
+            
+            <label class="form-check-label" for="id_dependentes_111698">
+              <input class="form-check-input membership-check" type="checkbox" name="dependentes" value="111698" id="id_dependentes_111698">
+              <h4>GLEISON FRANCA</h4>
+            </label>
+            
+          </div>
+          
+          <div class="form-check">
+            
+            <label class="form-check-label" for="id_dependentes_982754">
+              <input class="form-check-input membership-check" type="checkbox" name="dependentes" value="982754" id="id_dependentes_982754">
+              <h4>JOSE FRANCA</h4>
+            </label>
+            
+          </div>
+          
+          <div class="form-check">
+            
+            <label class="form-check-label" for="id_dependentes_996435">
+              <input class="form-check-input membership-check" type="checkbox" name="dependentes" value="996435" id="id_dependentes_996435">
+              <h4>EVELYNE FRANCA</h4>
+            </label>
+            
+          </div>
+          
+
+          <div class="row mt-3">
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+              <button id="submit_fieltorcedor_booking_by_dependente_form" type="submit" class="btn btn-primary disable-on-submit">Reservar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+        </div>
+      </main>
+
+    
+
+    
+
+<footer>
+  <div class="bg-gray-4300 pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            <b>Clube social do Corinthians - Atendimento Presencial</b>
+          </div>
+          <div class="text-white font-gotham font12">
+            Ao lado do memorial de conquistas.
+            <br>
+            Rua São Jorge, 777 - Tatuapé<br>São Paulo - SP
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            <b>Horário Posto de atendimento</b>
+          </div>
+          <div class="text-white font-gotham font12">
+            Terça-feira à quinta-feira, das 8h às 19h,<br>Sexta-feira das
+            08h às 18h, <br>Sábado, domingo e feriado das 10h às 17h.<br>Segunda-feira
+            fechado.
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            <b>Fale conosco <!--através do Whatsapp--></b>
+          </div>
+          <div class="text-white font-gotham font12">
+            <!--<a href="https://wa.me/551131524000" target="_blank"></a>
+              <i class="fa fa-whatsapp">
+            -->
+               11 3152 4000
+            
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            Horário de atendimento
+          </div>
+          <div class="text-white font-gotham font12">
+            De segunda a quinta-feira, das 8h às 19h,<br>Sextas-feiras das
+            8h às 18h. <br>Sábados, domingos e feriados somente presencial
+            no posto de Atendimento do Clube
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="text-center d-md-flex flex-wrap align-items-center py-3 mb-1">
+        <a class="navbar-brand w-100 mr-xl" href="https://www.corinthians.com.br/" target="_blank">
+          <img alt="Logotipo do rodapé" src="/static/fieltorcedor/img/logo-rodape.png" loading="lazy" class="w-sm-15">
+        </a>
+      </div>
+      <div class="text-center flex-wrap align-items-center w-100 text-gray-4700 mb-2 font12 text-white font-gotham">
+        Sport Club Corinthians Paulista - Fiel Torcedor
+      </div>
+      <div class="text-center flex-wrap align-items-center w-100 text-gray-4700 mb-2 font12 text-white font-gotham">
+        Todos os direitos reservados © Copyright 2011-2023
+      </div>
+      <div class="text-center flex-wrap align-items-center w-100 text-gray-4700 font12 font-gotham">
+        <a href="/politica-de-privacidade/" class="text-gray-4700 font12">Política de Privacidade</a>
+        |
+        <a href="/termos-de-uso/" class="text-gray-4700 font12">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<!-- Modal Central de Ajuda -->
+<div class="modal fade" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalAjudaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content border-0 bg-transparent">
+      <button type="button" class="close text-right text-white position-absolute" style="right: 15px; top: 15px; z-index: 999" data-dismiss="modal" aria-label="Fechar">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+      </button>
+      <div class="modal-body p-0">
+        <section class="container-fluid bg-black border-radius p-5">
+          <div class="row">
+            <div class="col font-steelfish font35 text-white text-uppercase p-0">
+              central de ajuda
+            </div>
+            <div class="col-md-12 p-0">
+
+<div class="col font-gotham font16 textosDoc p-0 my-3">
+  <div class="accordion" id="accordion">
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading1">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            O que é o programa Fiel Torcedor?
+          </button>
+        </spam>
+      </div>
+      <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p style="text-align: left">
+            <span style="font-weight: 400">
+              • O Fiel Torcedor é o programa de sócio torcedor do Sport Club Corinthians Paulista. Proporciona benefícios, vantagens de descontos e prioridades na compra de ingressos para jogos do Timão como mandante e, além de tudo, a satisfação de ajudar o Corinthians a evoluir.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading6">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+            O que é a conta unificada de Fiel Torcedor e Ingressos Corinthians?
+          </button>
+        </spam>
+      </div>
+      <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p>
+            • Agora, o login e senha do Fiel Torcedor e Ingressos Corinthians são unificados e o acesso ocorre no mesmo site. Isto é, agora você pode acessar o site Fiel Torcedor com o login e senha do Fiel Torcedor ou o e-mail e senha do Ingressos Corinthians.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading106">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse106" aria-expanded="true" aria-controls="collapse106">
+            O que são as Categorias Inclusivas
+          </button>
+        </spam>
+      </div>
+      <div id="collapse106" class="collapse" aria-labelledby="heading106" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p>
+            • Essas categorias especiais são as categorias que oferecem descontos ou benefícios especiais em ingressos para os jogos.
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading107">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse107" aria-expanded="true" aria-controls="collapse107">
+            Quais os documentos necessários para Categorias Inclusivas?
+          </button>
+        </spam>
+      </div>
+      <div id="collapse107" class="collapse" aria-labelledby="heading107" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p>
+            • DOCUMENTOS e PRAZO de VALIDADE PARA CADA CATEGORIA:
+            <br><br>
+            

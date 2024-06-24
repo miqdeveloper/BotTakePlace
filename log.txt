@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="pt-BR"><head><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/mt_captcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/turnstile/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/turnstile/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/amazon_waf/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/yandex/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/lemin/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/arkoselabs/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/arkoselabs/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/recaptcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/recaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/keycaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/hcaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/hcaptcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/geetest_v4/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/geetest/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/communication_helpers.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/core_helpers.js"></script>
+    <title>Fiel Torcedor</title>
+    <meta name="description" content="Ingressos Corinthians e Planos do Fiel Torcedor em um só site.">
+    <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="canonical" href="https://www.fieltorcedor.com.br">
+    <meta name="robots" content="index, follow">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="feBU_jgA_CTTTJaXehF7altJZwrkv5Lm-NVEhPqQa8U">
+    
+
+    <link rel="shortcut icon" href="/static/fieltorcedor/img/favicon.ico">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="/static/fieltorcedor/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/slick-v2.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/slick-theme.min.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/animate.min.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/pace-theme.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/balloon.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/styles-v53.css">
+    
+    
+    <style type="text/css">
+.sector							{ opacity: 1 } 
+.sector:hover 					{ opacity: 0.7 }
+.sector.leste-inferior-central	{ fill: #f80025; }
+.sector.leste-inferior-lateral	{ fill: #f27176; }
+.sector.leste-superior-central	{ fill: #850d26; }
+.sector.leste-superior-lateral	{ fill: #c12041; }
+.sector.norte					{ fill: black; }
+.sector.oeste-inferior-corner	{ fill: #45bee9; }
+.sector.oeste-inferior-lateral	{ fill: #3389c6; }
+.sector.oeste-inferior-central 	{ fill: #3434c5; }
+.sector.oeste-lateral			{ fill: #308bc4; }
+.sector.oeste-superior			{ fill: #a2459e; }
+.sector.sul						{ fill: #4e3112; }
+.sector.sul-visitante			{ fill: #e9861b; }
+.sector.disabled				{ fill: #8395a7; opacity: 0.4; cursor: not-allowed; }
+</style>
+    
+  <captcha-widgets></captcha-widgets></head>
+  <body class="pace-running "><div class="pace pace-active"><div class="pace-progress" data-progress-text="2%" data-progress="02" style="transform: translate3d(2.12833%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+
+    
+
+    
+
+
+  
+
+<nav class="menu-mobile" id="menu_nav">
+
+  <i class="fa fa-close close_nav" style="font-size:36px"></i>
+  <ul class="menu-nav authenticate">
+    <li class="op">
+      MINHA CONTA
+    </li>
+      <li><a href="/minha-conta/categorias/" class="close_nav">Categorias</a></li>
+
+    
+      <li><a href="/minha-conta/dependentes/" class="close_nav">Dependentes</a></li>
+    
+
+      <li><a href="/minha-conta/alterar-cadastro/" class="close_nav">Alterar Cadastro</a></li>
+      <li><a href="/auth/password_change/" class="close_nav">Alterar Senha</a></li>
+
+    
+
+    
+
+    
+      <li><a href="/minha-conta/financeiro/" class="close_nav">Financeiro</a></li>
+      <li><a href="/minha-conta/extrato/" class="close_nav">Extrato</a></li>
+      <li><a href="/minha-conta/pontos/" class="close_nav">Pontos</a></li>
+    
+    <li class="op">
+      Ingressos
+    </li>
+
+
+
+
+        <li><a href="/jogos/" class="close_nav">Comprar ingressos</a></li>
+        <li><a href="/ingressos/" class="close_nav">Meus Ingressos</a></li>
+
+    
+
+    <li style="margin-top: 1rem;"> <a href="#" data-toggle="modal" data-target="#modalAjuda" class="close_nav">AJUDA</a></li>
+    <li> <a href="/auth/logout/" class="close_nav">Sair</a></li>
+     
+  </ul>
+</nav>
+
+<header>
+  
+
+
+<ul class="logos">
+  <li class="list-unstyled">
+    <a href="https://www.instagram.com/fieltorcedor/" class="align-middle" target="_blank">
+      <i class="fa fa-instagram fa" style="margin-right: 12px;">
+        <span class="d-none"> icon </span>
+      </i>
+    </a> 
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.facebook.com/programafieltorcedor" class="align-middle" target="_blank">
+      <i class="fa fa-facebook fa">
+        <span class="d-none"> icon </span>
+      </i>
+    </a>
+  </li>
+  <li class="list-unstyled">
+    <a href="https://twitter.com/fieltorcedor" class="align-middle" target="_blank">
+      <i class="logo-twitterx">
+        <span class="d-none"> icon </span>
+      </i>
+    </a> 
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.corinthians.com.br/" class="align-middle" target="_blank">
+      <img alt="Logo Fiel Torcedor" src="/static/fieltorcedor/img/logo.png" loading="lazy">
+    </a> 
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.corinthianstv.com" class="align-middle" target="_blank">
+      <i class="logo-corinthianstv color-light fa mx-2">
+        <span class="d-none"> icon </span>
+      </i>
+    </a>
+  </li>
+  <li class="list-unstyled">
+    <a href="https://www.youtube.com/@corinthians" class="align-middle" target="_blank">
+      <i class="fa fa-youtube fa">
+        <span class="d-none"> icon </span>
+      </i>
+    </a> 
+  </li>
+  <li class="list-unstyled"> 
+    <a href="https://onelink.to/sccp" class="align-middle" target="_blank">
+      <i class="logo-usccp">
+        <span class="d-none"> icon </span>
+      </i> 
+    </a>
+  </li>
+</ul>
+  
+  <div class="header-container authenticate">
+    <div class="item  item-auth">     
+      <a href="/" class="align-top">
+        <img alt="Imagem Fiel Torcedor" src="/static/fieltorcedor/img/logo-fiel-torcedor.png" loading="lazy" class="logo">
+      </a>
+    </div>
+    <div class="item auth">
+      <div class="item-menu">
+        <a class="icon" id="btn_nav">
+          <i class="fa fa-bars"></i><span>MENU</span>
+        </a>
+
+        <div class="header-menu" style="position: relative;">
+          <div class="p-0 d-inline-block">
+            <button class="bg-transparent border-0 text-white minha-conta font-steelfish position-relative p-0 m-0 mx-2 font20">MINHA CONTA</button>
+            
+            <div class="col-3 p-0 pb-2 submenu minha-conta position-absolute text-center d-none px-1">
+              <hr class="m-0 w-75 mx-auto" style="border: 0.1px inset #847248">
+              <a href="/minha-conta/categorias/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Categorias</a>
+
+              
+              <a href="/minha-conta/dependentes/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Dependentes</a>
+              
+
+              <a href="/minha-conta/alterar-cadastro/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Alterar Cadastro</a>
+              <a href="/auth/password_change/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Alterar Senha</a>
+
+              
+
+              
+
+              
+              <a href="/minha-conta/financeiro/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Financeiro</a>
+              <a href="/minha-conta/extrato/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Extrato</a>
+              <a href="/minha-conta/pontos/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Pontos</a>
+              
+            </div>
+          </div>
+
+          <div class="p-0 d-inline-block">
+            <button class="bg-transparent border-0 text-white ingressos font-steelfish  position-relative p-0 m-0 mx-2 font20">INGRESSOS</button>
+            <div class="col-3 p-0 pb-2 submenu ingressos position-absolute text-center d-none px-1">
+              <hr class="m-0 w-75 mx-auto" style="border: 0.1px inset #847248">
+              <a href="/jogos/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Comprar ingressos</a>
+              <a href="/ingressos/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Meus Ingressos</a>
+            </div>
+          </div>
+
+
+          
+          
+  
+          <a href="#" data-toggle="modal" data-target="#modalAjuda" class="font20">AJUDA</a>
+      
+        </div>
+      </div>
+      <div class="item-user"> 
+
+        
+        <div class="user">
+      
+  
+          <div class="font-gotham-black text-white text-left font14 p-0">
+            <span class="font-gotham-black font14">
+              BENJAMIN APARÍCIO
+            </span>
+            <div class="font-gotham-book text-white text-left font10 p-0">
+              Minha Vida / <a href="/auth/logout/">Sair</a>
+            </div>
+          </div>
+     
+          <div class="d-inline-block align-top">
+            
+            <a href="/minha-conta/pontos/">
+              <div class="font-gotham text-white font12 p-0 px-2 m-0 mx-auto">
+                <div class="font-gotham text-white d-inline-block font12 p-0 ml-1">
+                  <div class="font-gotham-black text-white font14 p-0 text-right">
+                    32,00
+                  </div>
+                  <span>
+                    Pontos
+                  </span>
+              
+                </div>
+        
+                  <img alt="coins" src="/static/fieltorcedor/img/coins.png" loading="lazy" class="align-baseline">
+        
+              </div>
+            </a>
+            
+          </div>
+     
+  
+        </div>
+        
+  
+      </div>
+    </div>
+
+
+  </div>
+
+</header>
+
+
+
+    
+
+      <main id="main" class="bg-login main">
+        <div class="container">
+          
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/jogos/">Jogos</a></li>
+    <li class="breadcrumb-item active" aria-current="page">CORINTHIANS X CUIABÁ (BR24)</li>
+    <li class="breadcrumb-item active" aria-current="page">Setores</li>
+  </ol>
+</nav>
+
+<h1 class="title">SELECIONE O SETOR</h1>
+<p class="lead">Qual setor você gostaria de assistir ao jogo?</p>
+
+<section id="main-content">
+  <div class="scrolling">
+    <div class="mapa-arena ">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485 503" style="enable-background:new 0 0 485 503;" xml:space="preserve">
+        
+          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-inferior-central/modo-de-compra/">
+          <g class="svg tooltip sector leste-inferior-central " id="leste-inferior-central" data-tippy-content="LESTE INFERIOR CENTRAL EPOCLER - R$112,50">
+            
+              <rect x="313.86" y="271.53" class="st3" width="43.95" height="21.47"></rect>
+<rect x="314.37" y="224.59" class="st3" width="43.62" height="21.47"></rect>
+<rect x="314.37" y="248.21" class="st3" width="43.62" height="21.47"></rect>
+<rect x="314.03" y="177.21" class="st3" width="43.95" height="21.47"></rect>
+<rect x="314.37" y="200.83" class="st3" width="43.62" height="21.47"></rect>
+
+            
+          </g>
+          </a>
+        
+          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-inferior-lateral/modo-de-compra/">
+          <g class="svg tooltip sector leste-inferior-lateral " id="leste-inferior-lateral" data-tippy-content="LESTE INFERIOR LATERAL EPOCLER - R$75,00">
+            
+              <rect x="313.86" y="295.14" class="st3" width="43.95" height="21.47"></rect>
+<rect x="313.86" y="153.74" class="st3" width="43.95" height="21.47"></rect>
+<polygon class="st3" points="357.81,151.33 357.69,122.8 349.6,115.02 313.57,150.07 313.86,151.33 		"></polygon>
+<polygon class="st3" points="313.56,318.78 313.56,320.17 349.67,354.67 357.69,347.45 357.52,318.78 		"></polygon>
+            
+          </g>
+          </a>
+        
+          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-superior-central/modo-de-compra/">
+          <g class="svg tooltip sector leste-superior-central " id="leste-superior-central" data-tippy-content="LESTE SUPERIOR CENTRAL NEOSALDINA - R$67,50">
+            
+              <rect x="360.33" y="271.85" class="st4" width="37.69" height="21.47"></rect>
+<rect x="360.77" y="248.53" class="st4" width="37.4" height="21.47"></rect>
+<rect x="360.77" y="224.91" class="st4" width="37.4" height="21.47"></rect>
+<rect x="360.77" y="201.15" class="st4" width="37.4" height="21.47"></rect>
+<rect x="360.48" y="177.53" class="st4" width="37.69" height="21.47"></rect>
+            
+          </g>
+          </a>
+        
+          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-superior-lateral/modo-de-compra/">
+          <g class="svg tooltip sector leste-superior-lateral " id="leste-superior-lateral" data-tippy-content="LESTE SUPERIOR LATERAL NEOSALDINA - R$67,50">
+            
+              <rect x="360.34" y="318.52" class="st4" width="37.69" height="17.65"></rect>
+<rect x="360.33" y="295.46" class="st4" width="37.69" height="21.47"></rect>
+<rect x="360.33" y="154.06" class="st4" width="37.69" height="21.47"></rect>
+<rect x="360.34" y="133.18" class="st4" width="37.69" height="18.38"></rect>
+            
+          </g>
+          </a>
+        
+          
+          <g class="svg tooltip sector norte disabled" id="norte" data-tippy-content="<span>NORTE ENGOV - Não disponível nesta categoria.</span>">
+            
+              <polygon class="st7" points="330.78,95.47 309.11,95.47 309.11,145.21 343.61,108.11 		"></polygon>
+<rect x="286.3" y="95.47" class="st7" width="21.21" height="49.75"></rect>
+<rect x="263.52" y="95.47" class="st7" width="21.21" height="49.75"></rect>
+<rect x="240.74" y="95.47" class="st7" width="21.21" height="49.75"></rect>
+<rect x="217.96" y="95.47" class="st7" width="21.21" height="49.75"></rect>
+<rect x="195.18" y="95.47" class="st7" width="21.21" height="49.75"></rect>
+<polygon class="st7" points="159.18,110.62 193.58,145.21 193.58,95.47 174.02,95.47 		"></polygon>
+
+            
+          </g>
+          
+        
+          
+          <g class="svg tooltip sector oeste-inferior-corner disabled" id="oeste-inferior-corner" data-tippy-content="<span>OESTE INFERIOR CORNER BUSCOPAN - Não disponível nesta categoria.</span>">
+            
+              <polygon class="st0" points="185.55,146.82 154.26,116.33 138.02,132.03 138.21,150.83 185.55,150.83"></polygon>
+
+<polygon class="st0" points="138.53,318.27 138.34,337.07 154.57,352.78 185.86,322.29 185.86,318.27"></polygon>
+
+            
+          </g>
+          
+        
+          
+          <g class="svg tooltip sector oeste-inferior-lateral disabled" id="oeste-inferior-lateral" data-tippy-content="<span>OESTE INFERIOR LATERAL BUSCOPAN - Não disponível nesta categoria.</span>">
+            
+              <rect x="138.21" y="153.24" class="st2" width="47.34" height="21.47"></rect>
+<rect x="138.02" y="176.71" class="st2" width="47.34" height="21.47"></rect>
+<rect x="138.21" y="271.03" class="st2" width="47.34" height="21.47"></rect>
+<rect x="138.21" y="294.64" class="st2" width="47.34" height="21.47"></rect>
+            
+          </g>
+          
+        
+          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/oeste-superior/modo-de-compra/">
+          <g class="svg tooltip sector oeste-superior " id="oeste-superior" data-tippy-content="OESTE SUPERIOR BENEGRIP - R$119,00">
+            
+              <rect x="99.67" y="122.91" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.67" y="122.91" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.76" y="143.32" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.76" y="143.32" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.72" y="163.67" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.72" y="163.67" class="st5" width="29.1" height="18.16"></rect>
+<polygon class="st5" points="99.8,184.08 99.8,202.24 118.81,202.24 118.81,187.74 128.91,187.74 128.91,184.08 		"></polygon>
+<polygon class="st5" points="99.8,184.08 99.8,202.24 118.81,202.24 118.81,187.74 128.91,187.74 128.91,184.08 		"></polygon>
+<rect x="99.72" y="204.4" class="st5" width="19.24" height="18.16"></rect>
+<rect x="99.72" y="204.4" class="st5" width="19.24" height="18.16"></rect>
+<rect x="99.8" y="224.81" class="st5" width="19.15" height="18.16"></rect>
+<rect x="99.8" y="224.81" class="st5" width="19.15" height="18.16"></rect>
+<rect x="99.72" y="245.39" class="st5" width="19.24" height="18.16"></rect>
+<rect x="99.72" y="245.39" class="st5" width="19.24" height="18.16"></rect>
+<polygon class="st5" points="118.81,265.8 99.8,265.8 99.8,283.97 128.91,283.97 128.91,281.61 118.81,281.61 		"></polygon>
+<polygon class="st5" points="118.81,265.8 99.8,265.8 99.8,283.97 128.91,283.97 128.91,281.61 118.81,281.61 		"></polygon>
+<rect x="99.72" y="286.13" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.72" y="286.13" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.8" y="306.54" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.8" y="306.54" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.74" y="326.84" class="st5" width="29.1" height="18.16"></rect>
+<rect x="99.74" y="326.84" class="st5" width="29.1" height="18.16"></rect>
+            
+          </g>
+          </a>
+        
+          
+          <g class="svg tooltip sector sul disabled" id="sul" data-tippy-content="<span>SUL DORIL - Não disponível nesta categoria.</span>">
+            
+              <polygon class="st6" points="171.61,372.62 191.17,372.62 191.17,325.28 156.77,358.2 		"></polygon>
+<rect x="192.77" y="325.28" class="st6" width="21.21" height="47.34"></rect>
+<rect x="215.55" y="325.28" class="st6" width="21.21" height="47.34"></rect>
+<rect x="238.33" y="325.28" class="st6" width="21.21" height="47.34"></rect>
+
+            
+          </g>
+          
+        
+      </svg>
+    </div>
+  </div>
+</section>
+
+        </div>
+      </main>
+
+    
+
+    
+
+<footer>
+  <div class="bg-gray-4300 pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            <b>Clube social do Corinthians - Atendimento Presencial</b>
+          </div>
+          <div class="text-white font-gotham font12">
+            Ao lado do memorial de conquistas.
+            <br>
+            Rua São Jorge, 777 - Tatuapé<br>São Paulo - SP
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            <b>Horário Posto de atendimento</b>
+          </div>
+          <div class="text-white font-gotham font12">
+            Terça-feira à quinta-feira, das 8h às 19h,<br>Sexta-feira das
+            08h às 18h, <br>Sábado, domingo e feriado das 10h às 17h.<br>Segunda-feira
+            fechado.
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            <b>Fale conosco <!--através do Whatsapp--></b>
+          </div>
+          <div class="text-white font-gotham font12">
+            <!--<a href="https://wa.me/551131524000" target="_blank"></a>
+              <i class="fa fa-whatsapp">
+            -->
+               11 3152 4000
+            
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <div class="text-white font-gotham font14 mb-2">
+            Horário de atendimento
+          </div>
+          <div class="text-white font-gotham font12">
+            De segunda a quinta-feira, das 8h às 19h,<br>Sextas-feiras das
+            8h às 18h. <br>Sábados, domingos e feriados somente presencial
+            no posto de Atendimento do Clube
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="text-center d-md-flex flex-wrap align-items-center py-3 mb-1">
+        <a class="navbar-brand w-100 mr-xl" href="https://www.corinthians.com.br/" target="_blank">
+          <img alt="Logotipo do rodapé" src="/static/fieltorcedor/img/logo-rodape.png" loading="lazy" class="w-sm-15">
+        </a>
+      </div>
+      <div class="text-center flex-wrap align-items-center w-100 text-gray-4700 mb-2 font12 text-white font-gotham">
+        Sport Club Corinthians Paulista - Fiel Torcedor
+      </div>
+      <div class="text-center flex-wrap align-items-center w-100 text-gray-4700 mb-2 font12 text-white font-gotham">
+        Todos os direitos reservados © Copyright 2011-2023
+      </div>
+      <div class="text-center flex-wrap align-items-center w-100 text-gray-4700 font12 font-gotham">
+        <a href="/politica-de-privacidade/" class="text-gray-4700 font12">Política de Privacidade</a>
+        |
+        <a href="/termos-de-uso/" class="text-gray-4700 font12">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+
+<!-- Modal Central de Ajuda -->
+<div class="modal fade" id="modalAjuda" tabindex="-1" role="dialog" aria-labelledby="modalAjudaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content border-0 bg-transparent">
+      <button type="button" class="close text-right text-white position-absolute" style="right: 15px; top: 15px; z-index: 999" data-dismiss="modal" aria-label="Fechar">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+      </button>
+      <div class="modal-body p-0">
+        <section class="container-fluid bg-black border-radius p-5">
+          <div class="row">
+            <div class="col font-steelfish font35 text-white text-uppercase p-0">
+              central de ajuda
+            </div>
+            <div class="col-md-12 p-0">
+
+<div class="col font-gotham font16 textosDoc p-0 my-3">
+  <div class="accordion" id="accordion">
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading1">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            O que é o programa Fiel Torcedor?
+          </button>
+        </spam>
+      </div>
+      <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p style="text-align: left">
+            <span style="font-weight: 400">
+              • O Fiel Torcedor é o programa de sócio torcedor do Sport Club Corinthians Paulista. Proporciona benefícios, vantagens de descontos e prioridades na compra de ingressos para jogos do Timão como mandante e, além de tudo, a satisfação de ajudar o Corinthians a evoluir.
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading6">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+            O que é a conta unificada de Fiel Torcedor e Ingressos Corinthians?
+          </button>
+        </spam>
+      </div>
+      <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p>
+            • Agora, o login e senha do Fiel Torcedor e Ingressos Corinthians são unificados e o acesso ocorre no mesmo site. Isto é, agora você pode acessar o site Fiel Torcedor com o login e senha do Fiel Torcedor ou o e-mail e senha do Ingressos Corinthians.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading106">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse106" aria-expanded="true" aria-controls="collapse106">
+            O que são as Categorias Inclusivas
+          </button>
+        </spam>
+      </div>
+      <div id="collapse106" class="collapse" aria-labelledby="heading106" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p>
+            • Essas categorias especiais são as categorias que oferecem descontos ou benefícios especiais em ingressos para os jogos.
+            <br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-transparent">
+      <div class="card-header back-gold p-0" id="heading107">
+        <spam class="mb-0 p-0 d-flex">
+          <button class="btn bg-transparent font-gotham-black text-white text-uppercase text-left p-3 w-100" style="white-space: normal" type="button" data-toggle="collapse" data-target="#collapse107" aria-expanded="true" aria-controls="collapse107">
+            Quais os documentos necessários para Categorias Inclusivas?
+          </button>
+        </spam>
+      </div>
+      <div id="collapse107" class="collapse" aria-labelledby="heading107" data-parent="#accordion">
+        <div class="card-body bg-light font-gotham-medium">
+          <p>
+            • DOCUMENTOS e PRAZO de VALIDADE PARA CADA CATEGORIA:
+            <br><br>
+            

@@ -5,16 +5,22 @@ import time
 import os
 
   # Gle88
+  # Benja88
   # Senha: leleu10a
 
   # leandro_1171@hotmail.com
   # Leleu10@
 
   # 739fb6774973746771da4e9cf35dcff5
+  
+  # https://www.fieltorcedor.com.br/jogos/corinthians-x-sao-paulo-br24/setor/sul/
+  # https://www.fieltorcedor.com.br/jogos/corinthians-x-cuiaba-br24/setor/leste-inferior-central/modo-de-compra/
+name = "Benja88"
+passwd  = "leleu10a" 
+path_user = r"C:\Users\mique\AppData\Local\Google\Chrome\User Data"
 
-
-
-url_ = "https://www.fieltorcedor.com.br/jogos/corinthians-x-santos-pf24/categoria/"
+url_ = "https://www.fieltorcedor.com.br/jogos/corinthians-x-cuiaba-br24/categoria/"
+url_t = "https://www.fieltorcedor.com.br/jogos/corinthians-x-cuiaba-br24/setor/leste-inferior-central/modo-de-compra/"
 
 def ler_primeira_linha(nome_arquivo):
   with open(nome_arquivo, 'r') as arquivo:
@@ -58,14 +64,21 @@ async def main():
   
   caminho_chrome = achar_caminho_chrome()
 
-  browser = await pyppeteer.launch(headless=False, args=['--no-sandbox', '--disable-setuid-sandbox', f'--disable-extensions-except={caminho_absoluto}', f'--load-extension={caminho_absoluto}'],  executablePath=rf"{caminho_chrome}")
+  browser = await pyppeteer.launch(headless=False, args=['--no-sandbox', 
+                                                         '--disable-setuid-sandbox',
+                                                         f"--user-data-dir={path_user}", 
+                                                          f'--disable-extensions-except={caminho_absoluto}', 
+                                                          f'--load-extension={caminho_absoluto}',
+                                                         
+                                                         ],                                     
+                                                          executablePath=rf"{caminho_chrome}")
 
   page = await browser.newPage()
   # await page.setCookie(*c)
   while True:
     try:
         
-      await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
+      # await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36")
       PageHtml = await page.goto(f'{url_}')
       
       print("PAGE STATUS: ", PageHtml.status)
@@ -81,14 +94,14 @@ async def main():
         PageHtml =  await page.goto(f'{url_}')
         await page.waitFor(6000)
         
-        await page.type("#id_username", "Gle88")
-        await page.type("#id_password", "leleu10a")
+        await page.type("#id_username", name)
+        await page.type("#id_password", passwd)
         
         url_page =  str(PageHtml.url)
         print("Acessando URL:", url_page)
       
         print("Nao logado...")      
-        await page.waitFor(25000)      
+        await page.waitFor(28000)      
         btn = await page.xpath('//*[@id="main"]/div/div/div/div/form/button')
         
         if btn:
@@ -110,21 +123,41 @@ async def main():
 
       print("Logado...")
       print("Apartir desse ponto o site vai ficar atualizando sozinho..."+'\n')
+      await page.goto(f'{url_}')
       
-      while str(PageHtml.url) == url_:
-            await page.goto(f'{url_}')
-            await page.waitFor(10000)
-            print("Procurando cadeiras...")
-            html = await page.content()
-            # print(html)
-      else:
-        pass
+      # while str(PageHtml.url) == url_:
+      # await page.goto(f'{url_t}')
+      await page.waitFor(3000)
+      
+      elem_= await page.xpath("//p[@class='btn btn-link']")
+      await elem_[0].click()
+      
+      await page.waitFor(3000)
+      current_url = await page.evaluate('window.location.href', force_expr=True)
+      # setores_click
+      
+      set_c = str(current_url)
+
+      setores_ = await page.goto(set_c)
+      print("Procurando cadeiras...")
+      
+      # await page.waitFor(900000)
+      await page.goto(url_t)
+      # await page.evaluate("")
+      html = await page.content()
+      
+      # with open("log.txt", 'w') as file:
+      #   await file.writelines(html)
+      
+  
+      await page.waitFor(100000)
+      await browser.close()
     
     except Exception as err:
       print(err)
-     # await browser.close()
-      # exit(0)
-      pass
+      await browser.close()
+      exit(0)
+      # exit()xlwe
     
     except KeyboardInterrupt:
       await browser.close()
