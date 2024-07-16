@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt-BR"><head><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/mt_captcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/turnstile/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/turnstile/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/amazon_waf/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/yandex/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/lemin/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/arkoselabs/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/arkoselabs/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/recaptcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/recaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/keycaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/hcaptcha/hunter.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/hcaptcha/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/geetest_v4/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/captcha/geetest/interceptor.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/communication_helpers.js"></script><script src="chrome-extension://olgcdelinakchlnjnploohiedlmocmdp/content/core_helpers.js"></script>
+<!DOCTYPE html><html lang="pt-BR"><head>
     <title>Fiel Torcedor</title>
     <meta name="description" content="Ingressos Corinthians e Planos do Fiel Torcedor em um só site.">
     <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="canonical" href="https://www.fieltorcedor.com.br">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="/static/fieltorcedor/css/animate.min.css">
     <link rel="stylesheet" href="/static/fieltorcedor/css/pace-theme.css">
     <link rel="stylesheet" href="/static/fieltorcedor/css/balloon.css">
-    <link rel="stylesheet" href="/static/fieltorcedor/css/styles-v53.css">
+    <link rel="stylesheet" href="/static/fieltorcedor/css/styles-v54.css">
     
     
     <style type="text/css">
@@ -41,8 +41,8 @@
 .sector.disabled				{ fill: #8395a7; opacity: 0.4; cursor: not-allowed; }
 </style>
     
-  <captcha-widgets></captcha-widgets></head>
-  <body class="pace-running "><div class="pace pace-active"><div class="pace-progress" data-progress-text="2%" data-progress="02" style="transform: translate3d(2.12833%, 0px, 0px);">
+  </head>
+  <body class="pace-done "><div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
   <div class="pace-progress-inner"></div>
 </div>
 <div class="pace-activity"></div></div>
@@ -181,7 +181,8 @@
               
 
               
-
+              
+              <a href="/minha-conta/creditos/" class="font-gotham-medium d-block text-uppercase font10 mt-2"> Créditos </a>
               
               <a href="/minha-conta/financeiro/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Financeiro</a>
               <a href="/minha-conta/extrato/" class="font-gotham-medium d-block text-uppercase font10 mt-2">Extrato</a>
@@ -228,7 +229,7 @@
               <div class="font-gotham text-white font12 p-0 px-2 m-0 mx-auto">
                 <div class="font-gotham text-white d-inline-block font12 p-0 ml-1">
                   <div class="font-gotham-black text-white font14 p-0 text-right">
-                    32,00
+                    30,00
                   </div>
                   <span>
                     Pontos
@@ -266,7 +267,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/jogos/">Jogos</a></li>
-    <li class="breadcrumb-item active" aria-current="page">CORINTHIANS X CUIABÁ (BR24)</li>
+    <li class="breadcrumb-item active" aria-current="page">CORINTHIANS X CRICIÚMA (BR24)</li>
     <li class="breadcrumb-item active" aria-current="page">Setores</li>
   </ol>
 </nav>
@@ -279,8 +280,8 @@
     <div class="mapa-arena ">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485 503" style="enable-background:new 0 0 485 503;" xml:space="preserve">
         
-          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-inferior-central/modo-de-compra/">
-          <g class="svg tooltip sector leste-inferior-central " id="leste-inferior-central" data-tippy-content="LESTE INFERIOR CENTRAL EPOCLER - R$112,50">
+          
+          <g class="svg tooltip sector leste-inferior-central disabled" id="leste-inferior-central" data-tippy-content="<span>LESTE INFERIOR CENTRAL EPOCLER - Não disponível nesta categoria.</span>">
             
               <rect x="313.86" y="271.53" class="st3" width="43.95" height="21.47"></rect>
 <rect x="314.37" y="224.59" class="st3" width="43.62" height="21.47"></rect>
@@ -290,10 +291,10 @@
 
             
           </g>
-          </a>
+          
         
-          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-inferior-lateral/modo-de-compra/">
-          <g class="svg tooltip sector leste-inferior-lateral " id="leste-inferior-lateral" data-tippy-content="LESTE INFERIOR LATERAL EPOCLER - R$75,00">
+          
+          <g class="svg tooltip sector leste-inferior-lateral disabled" id="leste-inferior-lateral" data-tippy-content="<span>LESTE INFERIOR LATERAL EPOCLER - Não disponível nesta categoria.</span>">
             
               <rect x="313.86" y="295.14" class="st3" width="43.95" height="21.47"></rect>
 <rect x="313.86" y="153.74" class="st3" width="43.95" height="21.47"></rect>
@@ -301,10 +302,10 @@
 <polygon class="st3" points="313.56,318.78 313.56,320.17 349.67,354.67 357.69,347.45 357.52,318.78 		"></polygon>
             
           </g>
-          </a>
+          
         
-          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-superior-central/modo-de-compra/">
-          <g class="svg tooltip sector leste-superior-central " id="leste-superior-central" data-tippy-content="LESTE SUPERIOR CENTRAL NEOSALDINA - R$67,50">
+          
+          <g class="svg tooltip sector leste-superior-central disabled" id="leste-superior-central" data-tippy-content="<span>LESTE SUPERIOR CENTRAL NEOSALDINA - Não disponível nesta categoria.</span>">
             
               <rect x="360.33" y="271.85" class="st4" width="37.69" height="21.47"></rect>
 <rect x="360.77" y="248.53" class="st4" width="37.4" height="21.47"></rect>
@@ -313,10 +314,10 @@
 <rect x="360.48" y="177.53" class="st4" width="37.69" height="21.47"></rect>
             
           </g>
-          </a>
+          
         
-          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/leste-superior-lateral/modo-de-compra/">
-          <g class="svg tooltip sector leste-superior-lateral " id="leste-superior-lateral" data-tippy-content="LESTE SUPERIOR LATERAL NEOSALDINA - R$67,50">
+          
+          <g class="svg tooltip sector leste-superior-lateral disabled" id="leste-superior-lateral" data-tippy-content="<span>LESTE SUPERIOR LATERAL NEOSALDINA - Não disponível nesta categoria.</span>">
             
               <rect x="360.34" y="318.52" class="st4" width="37.69" height="17.65"></rect>
 <rect x="360.33" y="295.46" class="st4" width="37.69" height="21.47"></rect>
@@ -324,7 +325,7 @@
 <rect x="360.34" y="133.18" class="st4" width="37.69" height="18.38"></rect>
             
           </g>
-          </a>
+          
         
           
           <g class="svg tooltip sector norte disabled" id="norte" data-tippy-content="<span>NORTE ENGOV - Não disponível nesta categoria.</span>">
@@ -363,7 +364,7 @@
           </g>
           
         
-          <a xlink:href="/jogos/corinthians-x-cuiaba-br24/setor/oeste-superior/modo-de-compra/">
+          <a xlink:href="/jogos/corinthians-x-criciuma-br24/setor/oeste-superior/modo-de-compra/">
           <g class="svg tooltip sector oeste-superior " id="oeste-superior" data-tippy-content="OESTE SUPERIOR BENEGRIP - R$119,00">
             
               <rect x="99.67" y="122.91" class="st5" width="29.1" height="18.16"></rect>

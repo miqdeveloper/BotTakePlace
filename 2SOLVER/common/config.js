@@ -2,10 +2,10 @@ var Config = {
     default: {
         isPluginEnabled: true,
         apiKey: "739fb6774973746771da4e9cf35dcff5",
-        valute: "USD",
+        valute: "BRL",
         email: null,
         autoSubmitForms: true,
-        submitFormsDelay: 1,
+        submitFormsDelay: 0,
         enabledForNormal: true,
         enabledForRecaptchaV2: true,
         recaptchaV2Type: 'token',
