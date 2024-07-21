@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
+<!DOCTYPE html><html lang="pt-BR"><head><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/mt_captcha/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/turnstile/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/turnstile/hunter.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/amazon_waf/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/yandex/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/lemin/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/arkoselabs/hunter.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/arkoselabs/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/recaptcha/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/recaptcha/hunter.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/keycaptcha/hunter.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/hcaptcha/hunter.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/hcaptcha/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/geetest_v4/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/captcha/geetest/interceptor.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/communication_helpers.js"></script><script src="chrome-extension://einnohfpkklnadhgjadbjdihekfddgnl/content/core_helpers.js"></script>
     <title>Fiel Torcedor</title>
     <meta name="description" content="Ingressos Corinthians e Planos do Fiel Torcedor em um só site.">
     <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="canonical" href="https://www.fieltorcedor.com.br">
@@ -41,7 +41,7 @@
 .sector.disabled				{ fill: #8395a7; opacity: 0.4; cursor: not-allowed; }
 </style>
     
-  </head>
+  <captcha-widgets></captcha-widgets></head>
   <body class="pace-done "><div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
   <div class="pace-progress-inner"></div>
 </div>
@@ -267,7 +267,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/jogos/">Jogos</a></li>
-    <li class="breadcrumb-item active" aria-current="page">CORINTHIANS X CRICIÚMA (BR24)</li>
+    <li class="breadcrumb-item active" aria-current="page">CORINTHIANS X GRÊMIO (BR24)</li>
     <li class="breadcrumb-item active" aria-current="page">Setores</li>
   </ol>
 </nav>
@@ -280,8 +280,8 @@
     <div class="mapa-arena ">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485 503" style="enable-background:new 0 0 485 503;" xml:space="preserve">
         
-          
-          <g class="svg tooltip sector leste-inferior-central disabled" id="leste-inferior-central" data-tippy-content="<span>LESTE INFERIOR CENTRAL EPOCLER - Não disponível nesta categoria.</span>">
+          <a xlink:href="/jogos/corinthians-x-gremio-br24/setor/leste-inferior-central/modo-de-compra/">
+          <g class="svg tooltip sector leste-inferior-central " id="leste-inferior-central" data-tippy-content="LESTE INFERIOR CENTRAL EPOCLER - R$112,50">
             
               <rect x="313.86" y="271.53" class="st3" width="43.95" height="21.47"></rect>
 <rect x="314.37" y="224.59" class="st3" width="43.62" height="21.47"></rect>
@@ -291,7 +291,7 @@
 
             
           </g>
-          
+          </a>
         
           
           <g class="svg tooltip sector leste-inferior-lateral disabled" id="leste-inferior-lateral" data-tippy-content="<span>LESTE INFERIOR LATERAL EPOCLER - Não disponível nesta categoria.</span>">
@@ -364,7 +364,7 @@
           </g>
           
         
-          <a xlink:href="/jogos/corinthians-x-criciuma-br24/setor/oeste-superior/modo-de-compra/">
+          <a xlink:href="/jogos/corinthians-x-gremio-br24/setor/oeste-superior/modo-de-compra/">
           <g class="svg tooltip sector oeste-superior " id="oeste-superior" data-tippy-content="OESTE SUPERIOR BENEGRIP - R$119,00">
             
               <rect x="99.67" y="122.91" class="st5" width="29.1" height="18.16"></rect>

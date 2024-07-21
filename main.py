@@ -22,13 +22,13 @@ global f_link
 name = "Benja88"
 passwd  = "leleu10a"
 
-link_ = "/oeste-superior"
-path_user = r"C:\Users\Miqueias\AppData\Local\Google\Chrome\User Data\Miqueias"
+link_ = "/leste-inferior"
+path_user = r"C:\Users\Miqueias\AppData\Local\Google\Chrome\User Data\Profile 1"
 
 f_link = None
 
 url_base = "https://www.fieltorcedor.com.br/"
-url_ = "https://www.fieltorcedor.com.br/jogos/corinthians-x-criciuma-br24/categoria/"
+url_ = "https://www.fieltorcedor.com.br/jogos/corinthians-x-gremio-br24/categoria/"
 
 os.system("taskkill /f /im chrome.exe /T")
 
@@ -97,7 +97,7 @@ async def main():
       
       caminho_chrome = achar_caminho_chrome()
 
-      browser = await pyppeteer.launch(headless=True, args=['--no-sandbox', 
+      browser = await pyppeteer.launch(headless=False, args=['--no-sandbox', 
                                                             '--disable-setuid-sandbox',
                                                             f"--user-data-dir={path_user}", 
                                                               f'--disable-extensions-except={caminho_absoluto}', 
@@ -239,27 +239,41 @@ async def main():
             await page.waitFor(3000)
 
             await page.waitForXPath("//div[@class='form-check']")
-            elm_b = await page.xpath("//h4[text()='LUCCA APARÍCIO']")
-            await elm_b[0].click()
-            await page.waitFor(3000)
+            # elm_b = await page.xpath("//h4[text()='LUCCA APARÍCIO']")
+            await page.evaluate("""
+function marcarCheckBoxesDisponiveis() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
+  
+    for (const checkbox of checkboxes) {
+      checkbox.checked = true;
+    }
+};marcarCheckBoxesDisponiveis();document.getElementById("submit_fieltorcedor_booking_by_dependente_form").disabled = false;
+""", force_expr=True)
+            # await page.waitFor(9999999)
+            # await browser.close()
+            # await elm_b[0].click()
+            await page.waitFor(2000)
             elm_c = await page.xpath("//button[contains(@class,'btn btn-primary')]")
             await elm_c[0].click()
 
             await page.waitFor(200)
             await browser.close()
             os.system("taskkill /f /im chrome.exe /T")
+            break
       # exit()
 
     except Exception as err:
+      await browser.close()
       os.system("taskkill /f /im chrome.exe /T")
       print(err)
-      await browser.close()
+      
     
     
     except KeyboardInterrupt:
       os.system("taskkill /f /im chrome.exe /T")
       await browser.close()
       exit(0)
+      break
 
     continue
 
