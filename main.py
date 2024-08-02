@@ -26,7 +26,7 @@ passwd  = "leleu10a"
 link_ = "/sul"
 
 #Mude o local da pasta - o local onde a sessao do chrome sera aberta e mantida
-path_user = r"C:\Users\Miqueias\AppData\Local\Google\Chrome\User Data\Profile 1"
+path_user = r"C:\Users\Miqueias\AppData\Local\Google\Chrome\User Data\Miqueias"
 
 f_link = None
 
@@ -49,9 +49,6 @@ def gravar_em_arquivo(arg1, nome_arquivo='cookies.txt'):
         arquivo.write(str(arg1))
 
 def achar_caminho_chrome():
-  
-  
-  
       discos = ['C:', 'D:', 'E:', 'F:', 'G:']
       caminhos_possiveis = [
           '\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
@@ -102,11 +99,12 @@ async def main():
       
       caminho_chrome = achar_caminho_chrome()
 
-      browser = await pyppeteer.launch(headless=False, args=['--no-sandbox', 
+      browser = await pyppeteer.launch(args=['--no-sandbox', 
                                                             '--disable-setuid-sandbox',
                                                             f"--user-data-dir={path_user}", 
                                                               f'--disable-extensions-except={caminho_absoluto}', 
                                                               f'--load-extension={caminho_absoluto}',
+                                                              '--headless=new'
                                                             
                                                             ],                                     
                                                               executablePath=rf"{caminho_chrome}")
@@ -126,19 +124,6 @@ async def main():
       # print(str(PageHtml.request.url))
       
       if "auth" in pg_url:
-
-        # await browser.close()
-        # os.system("taskkill /f /im chrome.exe /T")
-        # time.sleep(3)       
-
-        # browser = await pyppeteer.launch(headless=False, args=['--no-sandbox', 
-        #                                             '--disable-setuid-sandbox',
-        #                                             f"--user-data-dir={path_user}", 
-        #                                               f'--disable-extensions-except={caminho_absoluto}', 
-        #                                               f'--load-extension={caminho_absoluto}',
-                                                    
-        #                                             ],                                     
-        #                                               executablePath=rf"{caminho_chrome}")
 
         while "auth" in pg_url:
           
@@ -163,17 +148,6 @@ async def main():
           PageHtml = await page.goto(url_)
           pg_url = str(PageHtml.url)
           
-          # await browser.close()
-          # os.system("taskkill /f /im chrome.exe /T")
-
-          # browser = await pyppeteer.launch(headless=True, args=['--no-sandbox', 
-          #                                           '--disable-setuid-sandbox',
-          #                                           f"--user-data-dir={path_user}", 
-          #                                             f'--disable-extensions-except={caminho_absoluto}', 
-          #                                             f'--load-extension={caminho_absoluto}',
-                                                    
-          #                                           ],                                     
-          #                                             executablePath=rf"{caminho_chrome}")
           
           continue
 
@@ -261,19 +235,17 @@ async def main():
             elm_c = await page.xpath("//button[contains(@class,'btn btn-primary')]")
             await elm_c[0].click()
 
-            await page.waitFor(200)
+            await page.waitFor(1000)
             await browser.close()
-            os.system("taskkill /f /im chrome.exe /T")
-            break
+            # os.system("taskkill /f /im chrome.exe /T")
+            # break
       # exit()
 
     except Exception as err:
       await browser.close()
       os.system("taskkill /f /im chrome.exe /T")
-      print(err)
-      
-    
-    
+      # print(err)
+         
     except KeyboardInterrupt:
       os.system("taskkill /f /im chrome.exe /T")
       await browser.close()
