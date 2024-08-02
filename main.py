@@ -22,13 +22,18 @@ global f_link
 name = "Benja88"
 passwd  = "leleu10a"
 
-link_ = "/leste-inferior"
+#Mude o link_ para reservar o lugar 
+link_ = "/sul"
+
+#Mude o local da pasta - o local onde a sessao do chrome sera aberta e mantida
 path_user = r"C:\Users\Miqueias\AppData\Local\Google\Chrome\User Data\Profile 1"
 
 f_link = None
 
 url_base = "https://www.fieltorcedor.com.br/"
-url_ = "https://www.fieltorcedor.com.br/jogos/corinthians-x-gremio-br24/categoria/"
+
+# Mude o link do jogo para rodar o bot copie o link ate /categoria/  Ex: "https://www.fieltorcedor.com.br/jogos/corinthians-x-juventude-br24/categoria/"
+url_ = "https://www.fieltorcedor.com.br/jogos/corinthians-x-juventude-br24/categoria/"
 
 os.system("taskkill /f /im chrome.exe /T")
 
@@ -241,13 +246,13 @@ async def main():
             await page.waitForXPath("//div[@class='form-check']")
             # elm_b = await page.xpath("//h4[text()='LUCCA APARÍCIO']")
             await page.evaluate("""
-function marcarCheckBoxesDisponiveis() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
-  
-    for (const checkbox of checkboxes) {
-      checkbox.checked = true;
-    }
-};marcarCheckBoxesDisponiveis();document.getElementById("submit_fieltorcedor_booking_by_dependente_form").disabled = false;
+                            function marcarCheckBoxesDisponiveis() {
+                                const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked)');
+                              
+                                for (const checkbox of checkboxes) {
+                                  checkbox.checked = true;
+                                }
+                            };marcarCheckBoxesDisponiveis();document.getElementById("submit_fieltorcedor_booking_by_dependente_form").disabled = false;
 """, force_expr=True)
             # await page.waitFor(9999999)
             # await browser.close()
